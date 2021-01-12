@@ -5,58 +5,248 @@
 </title>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://icons-for-free.com/iconfiles/png/512/burger-131983752788592773.png">
+
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+
+    <audio id="audioClick">
+        <source src="audio/click.ogg" type="audio/ogg">
+        <source src="audio/click.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 
 </head>
 
 <body>
-    <div class="banner">
-        <div class="banner-text">
-            <h2>Eat like a king, only at</h2>
-            <h1>Burger Palace</h1>
+
+
+    <a href="#" class="goToTop" id="goToTop">
+        <img class="arrow" src="./icons/arrow_circle_up-24px.svg" />
+    </a>
+
+    <header>
+        <nav>
+            <div class="navbar">
+                <a href="#">
+                    <svg version="1.1" id="burgerLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve" width="40px" height="40px">
+<g>
+	<g>
+		<g>
+			<circle style="fill:#79302A;" cx="148.5" cy="148.5" r="148.5"/>
+		</g>
+	</g>
+	<path style="fill:#591B18;" d="M228.664,103.188L61.707,210.712l86.281,86.281c0.171,0,0.341,0.006,0.512,0.006
+		c75.343,0,137.573-56.111,147.2-128.824L228.664,103.188z"/>
+	<g>
+		<path style="fill:#C63C22;" d="M68.791,170.436h159.418c4.82,0,8.727-3.907,8.727-8.727l0,0c0-4.82-3.907-8.727-8.727-8.727
+			H68.791c-4.82,0-8.727,3.907-8.727,8.727l0,0C60.064,166.529,63.971,170.436,68.791,170.436z"/>
+	</g>
+	<g>
+		<path style="fill:#D35400;" d="M68.791,187.636h159.418c4.82,0,8.727-3.907,8.727-8.727l0,0c0-4.82-3.907-8.727-8.727-8.727
+			H68.791c-4.82,0-8.727,3.907-8.727,8.727l0,0C60.064,183.729,63.971,187.636,68.791,187.636z"/>
+	</g>
+	<g>
+		<path style="fill:#B2301F;" d="M228.209,152.982h-79.542v17.454h79.542c4.82,0,8.727-3.907,8.727-8.727l0,0
+			C236.936,156.889,233.029,152.982,228.209,152.982z"/>
+	</g>
+	<g>
+		<path style="fill:#BA4504;" d="M228.209,170.182h-79.542v17.454h79.542c4.82,0,8.727-3.907,8.727-8.727
+			C236.936,174.089,233.029,170.182,228.209,170.182z"/>
+	</g>
+	<g>
+		<path style="fill:#E59A51;" d="M68.791,212.655h159.418c8.033,0,14.545-6.512,14.545-14.545l0,0
+			c0-8.033-6.512-14.545-14.545-14.545H68.791c-8.033,0-14.545,6.512-14.545,14.545l0,0
+			C54.245,206.142,60.758,212.655,68.791,212.655z"/>
+	</g>
+	<g>
+		<path style="fill:#CC8244;" d="M228.209,183.563h-79.542v29.091h79.542c8.033,0,14.545-6.512,14.545-14.545
+			S236.242,183.563,228.209,183.563z"/>
+	</g>
+	<g>
+		<path style="fill:#FFCF6D;" d="M203.65,156.718l-23.031,46.063c-1.248,2.495-4.808,2.495-6.056,0l-23.031-46.063
+			c-1.125-2.251,0.511-4.899,3.028-4.899h46.063C203.139,151.818,204.776,154.467,203.65,156.718z"/>
+	</g>
+	<g>
+		<path style="fill:#E59A51;" d="M244.5,134.946c0.267-31.672-42.835-57.524-96-57.6c-53.019-0.076-96,25.788-96,57.6
+			c0,0.085,0,0.169,0.001,0.253c0.081,11.184,9.398,20.11,20.583,20.11h150.833c11.185,0,20.501-8.926,20.583-20.11
+			C244.5,135.114,244.499,135.03,244.5,134.946z"/>
+	</g>
+	<g>
+		<path style="fill:#CC8244;" d="M148.667,77.347v77.962h75.249c11.185,0,20.501-8.926,20.583-20.11
+			c0.001-0.084,0-0.169,0.001-0.253C244.767,103.306,201.755,77.477,148.667,77.347z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                </a>
+                <ul>
+                    <li><a class="navitem" href="#aboutus" onmouseover="playHoverSound()">Our Location</a></li>
+                    <li><a class="navitem" href="#menu" onmouseover="playHoverSound()">Menu</a></li>
+                    <li><a class="navitem" href="#order" onmouseover="playHoverSound()">Place order</a></li>
+                    <li><a class="navitem" href="#contact" onmouseover="playHoverSound()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="banner">
+            <div class="banner-text">
+                <h2>Eat like royalty, only at</h2>
+                <h1>Burger Palace</h1>
+            </div>
         </div>
-    </div>
 
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <video id="burgers" loop>
+            <video id="burgers" loop onload="applyGradient()">
             <source src="videos/burger_flip.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-        </video>
-        <div class="gradient">
-        </div>
-        <div class="burger-text">
-            <h1 id="vidtext1">The freshest meat.</h1>
-            <h2 id="vidtext2">Cooked to perfection right in front of you.
-            </h2>
-
-        </div>
-
-    </div>
-
-
-
-
-    <!-- <div class="wrapper">
-        <div class="gradient">
-        </div>
-        <video id="burgers" loop>
-            <source src="videos/burger_flip.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-        </video>
-    </div> -->
-
-    <!-- <div class="wrapper">
-        <div class="gradient">
-            <video id="burgers" loop>
-                <source src="videos/burger_flip.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
             </video>
+            <div class="burger-text">
+                <h1 id="vidtext1">The freshest meat.</h1>
+                <h2 id="vidtext2">Cooked to perfection right in front of you.
+                </h2>
+            </div>
         </div>
-    </div> -->
 
+        <div class="buttonRow">
+            <button>
+                <a onclick="goBlackWhite()">Black and white</a>
+            </button>
+            <button>
+                <a onclick="changeHue()">Warmer colours</a>
+            </button>
+            <button>
+                <a onclick="invert()">Cursed burgers</a>
+            </button>
+            <button>
+                <a onclick="resetVid()">Reset</a>
+            </button>
+        </div>
+
+
+        <section id="aboutus">
+            <canvas id="interior" style="width: 100%; height: 20rem;">
+</canvas>
+        </section>
+
+        <section class="menu section" id="menu">
+            <h2 style="margin-left: 1.5rem;">Our selection of burgers</h2>
+
+            <div class="menuContainer">
+                <div class="menuContent">
+                    <img src="images/burger1.png" alt="" class="menuImg">
+                    <h3 class="menuName">Burger1</h3>
+                    <span class="menuDetail">Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients </span>
+                    <span class="menuPrice">26 RON</span>
+
+                </div>
+
+                <div class="menuContent">
+                    <img src="images/burger2.png" alt="" class="menuImg">
+                    <h3 class="menuName">Burger2</h3>
+                    <span class="menuDetail">Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients </span>
+                    <span class="menuPrice">28 RON</span>
+
+                </div>
+
+                <div class="menuContent">
+                    <img src="images/burger3.png" alt="" class="menuImg">
+                    <h3 class="menuName">Burger3</h3>
+                    <span class="menuDetail">Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients </span>
+                    <span class="menuPrice">27 RON</span>
+
+                </div>
+
+                <div class="menuContent">
+                    <img src="images/burger4.png" alt="" class="menuImg">
+                    <h3 class="menuName">Burger4</h3>
+                    <span class="menuDetail">Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients </span>
+                    <span class="menuPrice">30 RON</span>
+
+                </div>
+
+                <div class="menuContent">
+                    <img src="images/burger5.png" alt="" class="menuImg">
+                    <h3 class="menuName">Burger5</h3>
+                    <span class="menuDetail">Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients Ingredients </span>
+                    <span class="menuPrice">28 RON</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="order section " id="order">
+            <div class="orderContainer">
+                <div class="orderImg">
+                    <svg id="burgerSVG" width="300" height="315" viewBox="0 0 446 524" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path id="burgerSVG-bun1" d="M14 453H42H433C465 478 431.333 509.667 415 520C290.667 522.667 38.6 526.4 25 520C8 512 -1 485 -1 474C-1 465.2 9 456.333 14 453Z" fill="#F4C064"/>
+                        <path id="burgerSVG-meat" d="M445.609 414.261C445.609 435.776 428.168 453.218 406.652 453.218H39.348C17.833 453.218 0.390991 435.777 0.390991 414.261C0.390991 392.746 17.832 375.304 39.348 375.304H406.652C428.167 375.304 445.609 392.746 445.609 414.261Z" fill="#99774F"/>
+                        <path id="burgerSVG-salad" d="M445.609 364.174C445.609 388.762 425.675 408.696 401.087 408.696C386.493 408.696 373.547 401.668 365.43 390.818C363.347 388.034 360.043 386.435 356.566 386.435C353.089 386.435 349.784 388.034 347.702 390.818C339.585 401.668 326.639 408.696 312.045 408.696C297.451 408.696 284.505 401.668 276.388 390.818C274.306 388.034 271.001 386.435 267.524 386.435C264.047 386.435 260.742 388.034 258.66 390.818C250.543 401.668 237.597 408.696 223.003 408.696C208.409 408.696 195.463 401.668 187.346 390.818C185.263 388.034 181.959 386.435 178.482 386.435C175.005 386.435 171.7 388.034 169.618 390.818C161.501 401.668 148.555 408.696 133.961 408.696C119.367 408.696 106.421 401.668 98.304 390.818C96.221 388.034 92.917 386.435 89.44 386.435C85.963 386.435 82.658 388.034 80.576 390.818C72.459 401.668 59.513 408.696 44.919 408.696C20.331 408.696 0.397003 388.762 0.397003 364.174C0.397003 321.144 35.28 286.261 78.31 286.261H89.44H178.483H267.526H356.569H367.699C410.726 286.261 445.609 321.144 445.609 364.174Z" fill="#91F18B"/>
+                        <path id="burgerSVG-tomato" d="M445.609 308.522C445.609 320.817 435.643 330.783 423.348 330.783H22.652C10.357 330.783 0.390991 320.817 0.390991 308.522C0.390991 296.227 10.357 286.261 22.652 286.261H423.348C435.642 286.261 445.609 296.227 445.609 308.522Z" fill="#FF8355"/>
+                        <path id="burgerSVG-bun2" d="M423.348 286.261H22.652C10.357 286.261 0.390991 276.295 0.390991 264C0.390991 177.939 70.157 108.174 156.217 108.174H289.782C375.843 108.174 445.608 177.94 445.608 264C445.609 276.295 435.642 286.261 423.348 286.261Z" fill="#F4C064"/>
+                        <path id="burgerSVG-bun2" d="M398.304 241.739C398.304 246.349 394.566 250.087 389.956 250.087H378.826C374.216 250.087 370.478 246.349 370.478 241.739C370.478 237.129 374.216 233.391 378.826 233.391H389.956C394.567 233.391 398.304 237.129 398.304 241.739ZM345.435 155.478H334.305C329.695 155.478 325.957 159.216 325.957 163.826C325.957 168.436 329.695 172.174 334.305 172.174H345.435C350.045 172.174 353.783 168.436 353.783 163.826C353.783 159.216 350.045 155.478 345.435 155.478ZM387.174 197.217C387.174 192.607 383.436 188.869 378.826 188.869H367.696C363.086 188.869 359.348 192.607 359.348 197.217C359.348 201.827 363.086 205.565 367.696 205.565H378.826C383.436 205.565 387.174 201.828 387.174 197.217ZM323.174 211.13H312.044C307.434 211.13 303.696 214.868 303.696 219.478C303.696 224.088 307.434 227.826 312.044 227.826H323.174C327.784 227.826 331.522 224.088 331.522 219.478C331.522 214.868 327.784 211.13 323.174 211.13Z" fill="#FFEE92"/>
+                        <path id="burgerSVG-flag" d="M320.357 74.783H217.885V19.13H320.357C326.645 19.13 331.742 24.113 331.742 30.26V63.651C331.742 69.8 326.645 74.783 320.357 74.783Z" fill="#FF8355"/>
+                        <path id="burgerSVG-flag" d="M226.425 16.348V141.565H209.346V16.348C209.346 11.738 213.17 8 217.885 8C222.601 8 226.425 11.738 226.425 16.348Z" fill="#CEA05D"/>
+                        <path id="burgerSVG-crease" d="M249.196 141.565C249.196 146.175 245.373 149.913 240.657 149.913H183.728C179.013 149.913 175.189 146.175 175.189 141.565C175.189 136.955 179.013 133.217 183.728 133.217H240.657C245.373 133.217 249.196 136.955 249.196 141.565Z" fill="#F49744"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="446" height="524" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+
+                </div>
+                <div class="orderData">
+                    <p class="orderDescription">What are you waiting for?</p>
+                    <a href="" class="button">Order now!</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div id="map"></div>
+        </section>
+
+    </main>
+
+    <script src="index.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQZ9AcecL48SQ3sJ_Yr7WU6yGd9uKnVGo&callback=initMap">
+    </script>
 </body>
 
 </html>
